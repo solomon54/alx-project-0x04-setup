@@ -25,10 +25,10 @@ return (
              </div>
 
         {/* Buttons */}
-        <div className="flex space-x-4"> {count}
+        <div className="flex space-x-4"> 
 
-        <button onClick={increment} className="bg-green-500 hover:bg-gray-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105"> Increment 🚀 </button>
-        <button onClick={decrement} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105">  Decrement 👎 </button>
+        <button onClick={increment} className="bg-green-500  hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100"> Increment 🚀 </button>
+        <button onClick={decrement} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100">  Decrement 👎 </button>
         </div>
 {/* Footer Massage */}
         <footer aria-label="footer sction">
