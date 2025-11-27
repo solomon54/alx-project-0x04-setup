@@ -8,9 +8,9 @@ export default function App({ Component, pageProps }: AppProps ) {
   return(
      <CountProvider>
         <Layout>
+        <CounterApp />
           <Component {...pageProps} />
         </Layout>
-        <CounterApp />
      </CountProvider>
   )
 }
