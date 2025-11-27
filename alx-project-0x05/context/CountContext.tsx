@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode }from "react";
 
-interface countContextPropes{
+interface countContextPropes {
     count: number,
     increment: () => void;
     decrement: () => void;
