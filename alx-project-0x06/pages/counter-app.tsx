@@ -1,14 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState, useAppDispatch, AppDispatch, increment, decrement } from "@/store/store";
+
 const CounterApp: React.FC = () => {
-    const [count, setCount] = useState(0);
+    const count = useSelector((state: RootState) => state.counter.value);
 
-const increment = () =>{
-    setCount(count + 1);
-};
+    const dispatch: AppDispatch = useAppDispatch();
 
-const decrement = () =>{
-    setCount(count >0? count - 1: 0);
-};
 
 
 return (
@@ -27,14 +25,14 @@ return (
         {/* Buttons */}
         <div className="flex space-x-4"> 
 
-        <button onClick={increment} className="bg-green-500  hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100"> Increment 🚀 </button>
-        <button onClick={decrement} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100">  Decrement 👎 </button>
+        <button onClick={ () => dispatch(increment())} className="bg-green-500  hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100"> Increment 🚀 </button>
+        <button onClick={ () => dispatch(decrement())} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105 active:scale-100">  Decrement 👎 </button>
         </div>
 {/* Footer Massage */}
         <footer aria-label="footer sction">
             <p className="mt-8 text-sm text-white opacity-75">Keep clicking, who knows what happens at 100? 😏
 </p>
-        </footer>
+        </footer> 
     </div>
 );
 }
